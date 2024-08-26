@@ -1,0 +1,410 @@
+
+/* Títulos */
+h1, h2, h3{
+  font-family: 'Playfair Display', serif; /* Fuente elegante similar a la imagen */
+  color: #333; /* Color principal */
+  text-align: center; /* Alineado centrado */
+  letter-spacing: 1.5px; /* Espaciado entre letras */
+  margin-bottom: 30px; /* Espacio inferior */
+  font-size: 36px; /* Tamaño de la fuente */
+  text-transform: uppercase; /* Transformación a mayúsculas */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Ajustes adicionales si quieres un borde o sombra */
+h1::after, h2::after, h3::after{
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #D56A47; /* Color similar al de los elementos de navegación */
+  margin: 10px auto 0; /* Centrado y margen superior */
+}
+
+h1:hover, h2:hover {
+  color: #D56A47; /* Cambia el color al pasar el mouse */
+  transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo Global */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('../src/assets/img.jpg');   /* Ruta a la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+}
+
+/* Contenedor Principal */
+.App {
+  max-width: 90%;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco semitransparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+h1, h2 {
+  color: #333;  /* Color principal */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;  /* Misma fuente que la app */
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* Contenedor de la Lista de Recetas */
+.recipe-list-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+/* Estilo de Detalle de receta */
+.recipe-detail{
+  background-color: #fafafa;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.recipe-detail p {
+  text-align: center;
+  color:  #A39E9E;;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.recipe-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la lista */
+.recipe-list {
+  list-style: none;
+  padding: 0;
+  color: #4f4e4e;
+}
+
+.recipe-list li {
+  background-color: #fafafa;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.recipe-list-container h2 {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* Mensaje cuando no hay recetas */
+.recipe-list-container p {
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Estilo del contenedor de botones en cada receta */
+.recipe-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaciado entre botones */
+  margin-top: 20px;
+}
+/* Estilo de cada elemento de la lista de recetas */
+.recipe-item {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-item p {
+  color:  #A39E9E;;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.recipe-item p {
+  margin-bottom: 10px;
+}
+
+
+
+/* Estilo del contenedor de botones en cada receta */
+.recipe-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaciado entre botones */
+  margin-top: 20px;
+}
+
+/* Estilo de los botones */
+.recipe-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #FF6F61;
+  border: 1px solid #FF6F61;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.recipe-button:hover {
+  background-color: #FF6F61;
+  color: white;
+}
+
+
+/* Estilo de los botones */
+.recipe-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #FF6F61;
+  border: 1px solid #FF6F61;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recipe-button:hover {
+  background-color: #FF6F61;
+  color: white;
+}
+
+.recipe-button:disabled {
+  background-color: #FFB74D;
+  cursor: not-allowed;
+}
+
+
+/* Títulos */
+.recipe-list-container h2 {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* Mensaje cuando no hay recetas */
+.recipe-list-container p {
+  text-align: center;
+  color: #A39E9E;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Formularios */
+form {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #A39E9E;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background-color: #fafafa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #FF6F61;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.4);
+}
+
+/* Botones */
+button {
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: #FF6F61;
+  border: 1px solid #FF6F61;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #FF6F61;
+  color: white;
+}
+
+button:disabled {
+  background-color: #FFB74D;
+  cursor: not-allowed;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-3px);
+}
+
+/* Navbar */
+
+/* Estilo para el logo */
+.navbar-logo {
+  height: 80px; /* Ajusta el tamaño del logo */
+}
+.navbar-h3 {
+  font-size: 20px;
+
+}
+
+.navbar-custom {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.navbar-brand-custom {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.navbar-brand-custom:hover {
+  color: #D56A47;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-link-custom {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #D56A47;
+  border-bottom: 2px solid #D56A47;
+}
+
+/* Estilo del botón de cerrar sesión */
+.logout-button-custom {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FF6F61;
+  border-color: #FF6F61;
+}
+
+.logout-button-custom:hover {
+  background-color: #FF6F61;
+  color: white;
+  border-color: #FF6F61;
+}
+
+/* Efectos de Hover en Formularios */
+input:hover, textarea:hover {
+  border-color: #FF6F61;
+}
+
+/* Estilo de los Botones de Autenticación */
+.auth-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.auth-buttons a {
+  color: #D56A47;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.auth-buttons a:hover {
+  color: #333;
+  transition: color 0.3s ease;
+}
