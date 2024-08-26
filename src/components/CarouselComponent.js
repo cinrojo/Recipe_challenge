@@ -1,6 +1,6 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';  // Asegúrate de importar Carousel correctamente
-import { Link } from 'react-router-dom';  // Asegúrate de importar Link correctamente
+import { Carousel } from 'react-bootstrap';  //  Carousel 
+import { Link } from 'react-router-dom';  
 import '../App.css'; 
 import imagen1 from '../assets/imagen1.jpg';
 import imagen2 from '../assets/imagen2.jpg';
@@ -31,7 +31,7 @@ const CarouselComponent = () => {
         />
         <Carousel.Caption>
           <div className="carousel-caption-custom">
-            <Link to="/recipes" className="carousel-button">Ver Receta</Link>
+            <Link to="/recipes" className="carousel-button">Ver Recetas</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,7 +44,7 @@ const CarouselComponent = () => {
         />
         <Carousel.Caption>
           <div className="carousel-caption-custom">
-            <Link to="/recipes" className="carousel-button">Ver Receta</Link>
+            <Link to="/recipes" className="carousel-button">Ver Recetas</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>

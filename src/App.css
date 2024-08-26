@@ -10,6 +10,23 @@ h1, h2, h3{
   text-transform: uppercase; /* Transformación a mayúsculas */
   font-weight: bold; /* Peso de la fuente */
 }
+/* Estilo de los íconos en la Navbar */
+.nav-icon-custom {
+  color: #333;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-icon-custom:hover {
+  color: #D56A47; /* Cambia el color al hacer hover */
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre los íconos */
+}
+
 
 /* Ajustes adicionales si quieres un borde o sombra */
 h1::after, h2::after, h3::after{

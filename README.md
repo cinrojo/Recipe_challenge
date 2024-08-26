@@ -1,72 +1,65 @@
-# Getting Started with Create React App
+# Recipe Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web para gestionar recetas de cocina. Permite a los usuarios registrarse, iniciar sesión, agregar recetas, ver la lista de recetas, marcar recetas como favoritas y mucho más. La aplicación utiliza React, React Router, y Bootstrap para la interfaz de usuario, y maneja el estado con Context API.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Registro y Autenticación de Usuarios**: Los usuarios pueden registrarse y autenticarse. El acceso a ciertas rutas está protegido y solo disponible para usuarios autenticados.
+- **Gestión de Recetas**: Los usuarios pueden agregar nuevas recetas, ver la lista de recetas, y ver los detalles de cada receta.
+- **Favoritos**: Los usuarios pueden marcar recetas como favoritas.
+- **Carrusel**: Un carrusel de imágenes está disponible en la página de inicio para los usuarios autenticados. Muestra imágenes relacionadas con las recetas.
+- **Navegación Protegida**: Algunas rutas son accesibles solo para usuarios autenticados. Si un usuario no está autenticado, se le redirige a la página de inicio de sesión.
 
-### `npm start`
+## Estructura del Proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **App.js**: Es el componente principal que maneja las rutas y envuelve la aplicación con los proveedores de contexto (AuthProvider y RecipeProvider).
+- **NavbarComponent.js**: Contiene la barra de navegación que muestra opciones según el estado de autenticación del usuario. También maneja la lógica para mostrar el carrusel cuando se hace clic en "Mi APP de Recetas".
+- **CarouselComponent.js**: Componente que muestra un carrusel de imágenes con un botón que redirige a la lista de recetas.
+- **AuthProvider.js**: Maneja la autenticación de usuarios utilizando Context API.
+- **RecipeProvider.js**: Maneja el estado de las recetas utilizando Context API.
+- **Componentes de Recetas**: Varios componentes para manejar la visualización y gestión de recetas (RecipeForm, RecipeList, RecipeDetail, FavoriteRecipes).
+Instala las dependencias:
+bash
+Copiar código
+npm install
+Inicia la aplicación:
+bash
+Copiar código
+npm start
+Uso
+Visita http://localhost:3000 para ver la aplicación en el navegador.
+Regístrate o inicia sesión para acceder a las funciones protegidas.
+Haz clic en "Mi APP de Recetas" en la barra de navegación para ver el carrusel de imágenes.
+Scripts Disponibles
+En el directorio del proyecto, puedes ejecutar:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
+Ejecuta la aplicación en modo de desarrollo.
+Abre http://localhost:3000 para verlo en tu navegador.
 
-### `npm test`
+npm test
+Lanza el corredor de pruebas en modo interactivo de vigilancia.
+Consulta la sección sobre running tests para más información.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm run build
+Compila la aplicación para producción en la carpeta build.
+La compila correctamente en modo de producción y optimiza la compilación para un mejor rendimiento.
 
-### `npm run build`
+npm run eject
+Nota: Esta es una operación unidireccional. Una vez que eject, no puedes volver atrás!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Aprender Más
+Puedes aprender más en la documentación de Create React App.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para aprender React, consulta la documentación de React.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Requisitos
 
-### `npm run eject`
+- Node.js
+- npm o yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Recipe_challenge
-# Recipe_challenge
+1. Clona el repositorio:
+   ```bash
+   git clone git@github.com:Lautaro-Palacios/Challenge_recipe.git
