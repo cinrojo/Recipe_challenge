@@ -16,7 +16,7 @@ const Login = () => {
     if (user) {
       login(username);
       alert('Inicio de sesión exitoso');
-      navigate('/recipes'); // Redirige a la página de "Mis Recetas"
+      navigate('/carousel'); // Redirige a la página principal
     } else {
       alert('Nombre de usuario o contraseña incorrectos');
     }
